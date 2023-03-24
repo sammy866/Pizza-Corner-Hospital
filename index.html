@@ -31,11 +31,15 @@
       <video id="pizza" controls autoplay loop>
         <source src="clips/clip1.mp4" />
       </video>
+      <div class="box"></div>
       <h1>Check out our menu</h1>
     </section>
     <script>
       var pizzaVideo = document.getElementById("pizza");
       pizzaVideo.controls = false;
+
+      var pizzaVideo = document.getElementById("pizza");
+      pizzaVideo.loop = true;
     </script>
   </body>
 </html>
