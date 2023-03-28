@@ -34,78 +34,638 @@
       <div class="box"></div>
       <h1>Check out our menu</h1>
     </section>
-    <div id="slider">
-      <input type="radio" name="slider" id="slide1" checked />
-      <input type="radio" name="slider" id="slide2" />
-      <input type="radio" name="slider" id="slide3" />
-      <input type="radio" name="slider" id="slide4" />
-      <div id="slides">
-        <div id="overflow">
-          <div class="inner">
-            <div class="slide slide_1">
-              <div class="slide-content left">
-                <h2>Pizza</h2>
-                <br />
-                <p>Margherita</p>
-              </div>
-              <div class="slide-content right">
-                <h2>Prices</h2>
-                <h3>10" 12" 16"</h3>
-                <p>€7 €9 €10</p>
-              </div>
-            </div>
-            <div class="slide slide_2">
-              <div class="slide-content left">
-                <h2>Slide 2</h2>
-                <p>Content for Slide 2</p>
-              </div>
-              <div class="slide-content right">
-                <h2>Slide 2</h2>
-                <p>Content for Slide 2</p>
-              </div>
-            </div>
-            <div class="slide slide_3">
-              <div class="slide-content left">
-                <h2>Slide 3</h2>
-                <p>Content for Slide 3</p>
-              </div>
-              <div class="slide-content right">
-                <h2>Slide 3</h2>
-                <p>Content for Slide 3</p>
-              </div>
-            </div>
-            <div class="slide slide_4">
-              <div class="slide-content left">
-                <h2>Slide 4</h2>
-                <p>Content for Slide 4</p>
-              </div>
-              <div class="slide-content right">
-                <h2>Slide 4</h2>
-                <p>Content for Slide 4</p>
-              </div>
-            </div>
-          </div>
+    <!--
+    <section id="order">
+      <div id="container">
+        <h1>Menu</h1>
+        <table id="table">
+          <tr class="tr">
+            <th>Pizza's</th>
+            <th>Toppings</th>
+            <th>Price's (10", 12", 16")</th>
+          </tr>
+          <tr class="tr">
+            <th>Margherita</th>
+            <th>Tomato Sauce, Double Cheese</th>
+            <th>€7, €9, €11</th>
+          </tr>
+          <tr class="tr Hide">
+            <th>Wraps</th>
+            <th>Prices</th>
+          </tr>
+          <tr class="tr Hide">
+            <th>Chicken Shawarma Wrap</th>
+            <th>€4.50</th>
+          </tr>
+          <tr class="tr Hide">
+            <th>Wraps</th>
+            <th>Prices</th>
+          </tr>
+          <tr class="tr Hide">
+            <th>Chicken Shawarma Wrap</th>
+            <th>€4.50</th>
+          </tr>
+          <tr class="tr Hide">
+            <th>Wraps</th>
+            <th>Prices</th>
+          </tr>
+          <tr class="tr Hide">
+            <th>Chicken Shawarma Wrap</th>
+            <th>€4.50</th>
+          </tr>
+          <tr class="tr Hide">
+            <th>Wraps</th>
+            <th>Prices</th>
+          </tr>
+          <tr class="tr Hide">
+            <th>Chicken Shawarma Wrap</th>
+            <th>€4.50</th>
+          </tr>
+        </table>
+        <div class="container">
+          <button id="btnP">&lt;&ltPrev</button>
+          <div id="btn1"><button>1</button></div>
+          <div id="btn2"><button>2</button></div>
+          <div id="btn3"><button style="background: red">3</button></div>
+          <button id="btnN">Next&gt;&gt;</button>
         </div>
       </div>
-      <div id="controls">
-        <label for="slide1"></label>
-        <label for="slide2"></label>
-        <label for="slide3"></label>
-        <label for="slide4"></label>
+    </section>-->
+
+    <div class="table-slider">
+      <div class="table-buttons">
+        <button class="pizza-btn active" data-table="pizza">Pizza</button>
+        <button class="wrap-btn" data-table="wrap">Wrap</button>
+        <button class="chips-btn" data-table="chips">Chips</button>
+        <button class="burger-btn" data-table="burgers">Burgers</button>
+        <button class="special-box-btn" data-table="special-boxes">
+          Special Boxes
+        </button>
+        <button class="side-orders-btn" data-table="side-orders">
+          Side Orders
+        </button>
+        <button class="chicken-btn" data-table="chicken">Chicken</button>
+        <button class="kebab-btn" data-table="kebab">Kebab</button>
+        <button class="meals-btn" data-table="meals">Meals</button>
+        <button class="drinks-btn" data-table="drinks">Drinks</button>
       </div>
-      <div id="bullets">
-        <label for="slide1"></label>
-        <label for="slide2"></label>
-        <label for="slide3"></label>
-        <label for="slide4"></label>
-      </div>
+      <table id="pizza-table">
+        <thead>
+          <tr>
+            <th>Pizza</th>
+            <th>Toppings</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pepperoni</td>
+            <td>Pepperoni, Cheese, Tomato Sauce</td>
+            <td>$12.99</td>
+          </tr>
+          <tr>
+            <td>Hawaiian</td>
+            <td>Ham, Pineapple, Cheese, Tomato Sauce</td>
+            <td>$13.99</td>
+          </tr>
+          <tr>
+            <td>Vegetarian</td>
+            <td>Mushrooms, Onions, Green Peppers, Cheese, Tomato Sauce</td>
+            <td>$14.99</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="wrap-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Wrap</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chicken Caesar Wrap</td>
+            <td>$8.99</td>
+          </tr>
+          <tr>
+            <td>Turkey Club Wrap</td>
+            <td>$9.99</td>
+          </tr>
+          <tr>
+            <td>Vegetable Wrap</td>
+            <td>$7.99</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="chips-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Chips</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Regular Chips</td>
+            <td>$2.99</td>
+          </tr>
+          <tr>
+            <td>Large Chips</td>
+            <td>$4.99</td>
+          </tr>
+          <tr>
+            <td>Curly Fries</td>
+            <td>$3.99</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="burgers-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Burgers</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cheeseburger</td>
+            <td>$6.99</td>
+          </tr>
+          <tr>
+            <td>Bacon Burger</td>
+            <td>$8.99</td>
+          </tr>
+          <tr>
+            <td>Mushroom Swiss Burger</td>
+            <td>$7.99</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="special-boxes-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Special Boxes</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Family Box</td>
+            <td>$29.99</td>
+          </tr>
+          <tr>
+            <td>Party Box</td>
+            <td>$49.99</td>
+          </tr>
+          <tr>
+            <td>Lunch Box</td>
+            <td>$9.99</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="side-orders-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Side Orders</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Garlic Bread</td>
+            <td>$3.99</td>
+          </tr>
+          <tr>
+            <td>Onion Rings</td>
+            <td>$4.99</td>
+          </tr>
+          <tr>
+            <td>Mozzarella Sticks</td>
+            <td>$5.99</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="chicken-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Chicken</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chicken Tenders</td>
+            <td>$7.99</td>
+          </tr>
+          <tr>
+            <td>Buffalo Wings</td>
+            <td>$9.99</td>
+          </tr>
+          <tr>
+            <td>BBQ Chicken</td>
+            <td>$10.99</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="kebab-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Kebab</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beef Kebab</td>
+            <td>$11.99</td>
+          </tr>
+          <tr>
+            <td>Chicken Kebab</td>
+            <td>$10.99</td>
+          </tr>
+          <tr>
+            <td>Lamb Kebab</td>
+            <td>$12.99</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="meals-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Meals</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fish and Chips</td>
+            <td>$13.99</td>
+          </tr>
+          <tr>
+            <td>Beef Stew</td>
+            <td>$11.99</td>
+          </tr>
+          <tr>
+            <td>Vegetable Stir Fry</td>
+            <td>$9.99</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="drinks-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Drinks</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Soda</td>
+            <td>$1.99</td>
+          </tr>
+          <tr>
+            <td>Juice</td>
+            <td>$2.99</td>
+          </tr>
+          <tr>
+            <td>Bottled Water</td>
+            <td>$1.49</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
     <script>
       var pizzaVideo = document.getElementById("pizza");
       pizzaVideo.controls = false;
 
       var pizzaVideo = document.getElementById("pizza");
       pizzaVideo.loop = true;
+    </script>
+    <!--
+    <script>
+      let x = 1;
+      let y = 2;
+      let z = 3;
+      let prev = document.getElementById("btnP");
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+      let btn3 = document.getElementById("btn3");
+      let next = document.getElementById("btnN");
+      let table = document.getElementById("table");
+      let tr = document.querySelectorAll(".tr");
+
+      function ascend() {
+        for (i = (x - 1) * 5; i < x * 5; i++) {
+          tr[i].classList.toggle("Hide");
+        }
+        for (i = (x - 2) * 5; i < (x - 1) * 5; i++) {
+          tr[i].classList.toggle("Hide");
+        }
+      }
+
+      function condition() {
+        btn1.innerHTML = `<button id="btn-${x}">${x}</button>`;
+        let red1 = document.getElementById(`btn-${x}`);
+        if (x % 3 == 0) {
+          red1.style.background = "red";
+        }
+        btn2.innerHTML = `<button id="btn-${y}">${y}</button>`;
+        let red2 = document.getElementById(`btn-${y}`);
+        if (y % 3 == 0) {
+          red2.style.background = "red";
+        }
+        btn3.innerHTML = `<button id="btn-${z}">${z}</button>`;
+        let red3 = document.getElementById(`btn-${z}`);
+        if (z % 3 == 0) {
+          red3.style.background = "red";
+        }
+      }
+
+      next.addEventListener("click", function () {
+        x++;
+        y++;
+        z++;
+        condition();
+        ascend();
+      });
+
+      prev.addEventListener("click", function () {
+        if (x > 1 || y > 2 || z > 3) {
+          x--;
+          y--;
+          z--;
+          condition();
+        }
+      });
+
+      btn2.addEventListener("click", function () {
+        x++;
+        y++;
+        z++;
+        condition();
+      });
+
+      btn3.addEventListener("click", function () {
+        x += 2;
+        y += 2;
+        z += 2;
+        condition();
+      });
+    </script>-->
+
+    <script>
+      const pizzaBtn = document.querySelector(".pizza-btn");
+      const wrapBtn = document.querySelector(".wrap-btn");
+      const chipsBtn = document.querySelector(".chips-btn");
+      const burgersBtn = document.querySelector(".burger-btn");
+      const specialboxBtn = document.querySelector(".special-box-btn");
+      const sideordersBtn = document.querySelector(".side-orders-btn");
+      const chickenBtn = document.querySelector(".chicken-btn");
+      const kebabBtn = document.querySelector(".kebab-btn");
+      const mealsBtn = document.querySelector(".meals-btn");
+      const drinksBtn = document.querySelector(".drinks-btn");
+
+      const pizzaTable = document.querySelector("#pizza-table");
+      const wrapTable = document.querySelector("#wrap-table");
+      const chipsTable = document.querySelector("#chips-table");
+      const burgersTable = document.querySelector("#burgers-table");
+      const specialboxTable = document.querySelector("#special-boxes-table");
+      const sideordersTable = document.querySelector("#side-orders-table");
+      const chickenTable = document.querySelector("#chicken-table");
+      const kebabTable = document.querySelector("#kebab-table");
+      const mealsTable = document.querySelector("#meals-table");
+      const drinksTable = document.querySelector("#drinks-table");
+
+      pizzaBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "table";
+        wrapTable.style.display = "none";
+        chipsTable.style.display = "none";
+        burgersTable.style.display = "none";
+        specialboxTable.style.display = "none";
+        sideordersTable.style.display = "none";
+        chickenTable.style.display = "none";
+        kebabTable.style.display = "none";
+        mealsTable.style.display = "none";
+        drinksTable.style.display = "none";
+        pizzaBtn.classList.add("active");
+        wrapBtn.classList.remove("active");
+        chipsBtn.classList.remove("active");
+        burgersBtn.classList.remove("active");
+        specialboxBtn.classList.remove("active");
+        sideordersBtn.classList.remove("active");
+        chickenBtn.classList.remove("active");
+        kebabBtn.classList.remove("active");
+        mealsBtn.classList.remove("active");
+        drinksBtn.classList.remove("active");
+      });
+
+      wrapBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "none";
+        wrapTable.style.display = "table";
+        chipsTable.style.display = "none";
+        burgersTable.style.display = "none";
+        specialboxTable.style.display = "none";
+        sideordersTable.style.display = "none";
+        chickenTable.style.display = "none";
+        kebabTable.style.display = "none";
+        mealsTable.style.display = "none";
+        drinksTable.style.display = "none";
+        pizzaBtn.classList.remove("active");
+        wrapBtn.classList.add("active");
+        chipsBtn.classList.remove("active");
+        burgersBtn.classList.remove("active");
+        specialboxBtn.classList.remove("active");
+        sideordersBtn.classList.remove("active");
+        chickenBtn.classList.remove("active");
+        kebabBtn.classList.remove("active");
+        mealsBtn.classList.remove("active");
+        drinksBtn.classList.remove("active");
+      });
+
+      chipsBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "none";
+        wrapTable.style.display = "none";
+        chipsTable.style.display = "table";
+        burgersTable.style.display = "none";
+        specialboxTable.style.display = "none";
+        sideordersTable.style.display = "none";
+        chickenTable.style.display = "none";
+        kebabTable.style.display = "none";
+        mealsTable.style.display = "none";
+        drinksTable.style.display = "none";
+        pizzaBtn.classList.remove("active");
+        wrapBtn.classList.remove("active");
+        chipsBtn.classList.add("active");
+        burgersBtn.classList.remove("active");
+        specialboxBtn.classList.remove("active");
+        sideordersBtn.classList.remove("active");
+        chickenBtn.classList.remove("active");
+        kebabBtn.classList.remove("active");
+        mealsBtn.classList.remove("active");
+        drinksBtn.classList.remove("active");
+      });
+
+      burgersBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "none";
+        wrapTable.style.display = "none";
+        chipsTable.style.display = "none";
+        burgersTable.style.display = "table";
+        specialboxTable.style.display = "none";
+        sideordersTable.style.display = "none";
+        chickenTable.style.display = "none";
+        kebabTable.style.display = "none";
+        mealsTable.style.display = "none";
+        drinksTable.style.display = "none";
+        pizzaBtn.classList.remove("active");
+        wrapBtn.classList.remove("active");
+        chipsBtn.classList.remove("active");
+        burgersBtn.classList.add("active");
+        specialboxBtn.classList.remove("active");
+        sideordersBtn.classList.remove("active");
+        chickenBtn.classList.remove("active");
+        kebabBtn.classList.remove("active");
+        mealsBtn.classList.remove("active");
+        drinksBtn.classList.remove("active");
+      });
+
+      specialboxBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "none";
+        wrapTable.style.display = "none";
+        chipsTable.style.display = "none";
+        burgersTable.style.display = "none";
+        specialboxTable.style.display = "table";
+        sideordersTable.style.display = "none";
+        chickenTable.style.display = "none";
+        kebabTable.style.display = "none";
+        mealsTable.style.display = "none";
+        drinksTable.style.display = "none";
+        pizzaBtn.classList.remove("active");
+        wrapBtn.classList.remove("active");
+        chipsBtn.classList.remove("active");
+        burgersBtn.classList.remove("active");
+        specialboxBtn.classList.add("active");
+        sideordersBtn.classList.remove("active");
+        chickenBtn.classList.remove("active");
+        kebabBtn.classList.remove("active");
+        mealsBtn.classList.remove("active");
+        drinksBtn.classList.remove("active");
+      });
+
+      sideordersBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "none";
+        wrapTable.style.display = "none";
+        chipsTable.style.display = "none";
+        burgersTable.style.display = "none";
+        specialboxTable.style.display = "none";
+        sideordersTable.style.display = "table";
+        chickenTable.style.display = "none";
+        kebabTable.style.display = "none";
+        mealsTable.style.display = "none";
+        drinksTable.style.display = "none";
+        pizzaBtn.classList.remove("active");
+        wrapBtn.classList.remove("active");
+        chipsBtn.classList.remove("active");
+        burgersBtn.classList.remove("active");
+        specialboxBtn.classList.remove("active");
+        sideordersBtn.classList.add("active");
+        chickenBtn.classList.remove("active");
+        kebabBtn.classList.remove("active");
+        mealsBtn.classList.remove("active");
+        drinksBtn.classList.remove("active");
+      });
+
+      chickenBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "none";
+        wrapTable.style.display = "none";
+        chipsTable.style.display = "none";
+        burgersTable.style.display = "none";
+        specialboxTable.style.display = "none";
+        sideordersTable.style.display = "none";
+        chickenTable.style.display = "table";
+        kebabTable.style.display = "none";
+        mealsTable.style.display = "none";
+        drinksTable.style.display = "none";
+        pizzaBtn.classList.remove("active");
+        wrapBtn.classList.remove("active");
+        chipsBtn.classList.remove("active");
+        burgersBtn.classList.remove("active");
+        specialboxBtn.classList.remove("active");
+        sideordersBtn.classList.remove("active");
+        chickenBtn.classList.add("active");
+        kebabBtn.classList.remove("active");
+        mealsBtn.classList.remove("active");
+        drinksBtn.classList.remove("active");
+      });
+
+      kebabBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "none";
+        wrapTable.style.display = "none";
+        chipsTable.style.display = "none";
+        burgersTable.style.display = "none";
+        specialboxTable.style.display = "none";
+        sideordersTable.style.display = "none";
+        chickenTable.style.display = "none";
+        kebabTable.style.display = "table";
+        mealsTable.style.display = "none";
+        drinksTable.style.display = "none";
+        pizzaBtn.classList.remove("active");
+        wrapBtn.classList.remove("active");
+        chipsBtn.classList.remove("active");
+        burgersBtn.classList.remove("active");
+        specialboxBtn.classList.remove("active");
+        sideordersBtn.classList.remove("active");
+        chickenBtn.classList.remove("active");
+        kebabBtn.classList.add("active");
+        mealsBtn.classList.remove("active");
+        drinksBtn.classList.remove("active");
+      });
+
+      mealsBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "none";
+        wrapTable.style.display = "none";
+        chipsTable.style.display = "none";
+        burgersTable.style.display = "none";
+        specialboxTable.style.display = "none";
+        sideordersTable.style.display = "none";
+        chickenTable.style.display = "none";
+        kebabTable.style.display = "none";
+        mealsTable.style.display = "table";
+        drinksTable.style.display = "none";
+        pizzaBtn.classList.remove("active");
+        wrapBtn.classList.remove("active");
+        chipsBtn.classList.remove("active");
+        burgersBtn.classList.remove("active");
+        specialboxBtn.classList.remove("active");
+        sideordersBtn.classList.remove("active");
+        chickenBtn.classList.remove("active");
+        kebabBtn.classList.remove("active");
+        mealsBtn.classList.add("active");
+        drinksBtn.classList.remove("active");
+      });
+
+      drinksBtn.addEventListener("click", function () {
+        pizzaTable.style.display = "none";
+        wrapTable.style.display = "none";
+        chipsTable.style.display = "none";
+        burgersTable.style.display = "none";
+        specialboxTable.style.display = "none";
+        sideordersTable.style.display = "none";
+        chickenTable.style.display = "none";
+        kebabTable.style.display = "none";
+        mealsTable.style.display = "none";
+        drinksTable.style.display = "table";
+        pizzaBtn.classList.remove("active");
+        wrapBtn.classList.remove("active");
+        chipsBtn.classList.remove("active");
+        burgersBtn.classList.remove("active");
+        specialboxBtn.classList.remove("active");
+        sideordersBtn.classList.remove("active");
+        chickenBtn.classList.remove("active");
+        kebabBtn.classList.remove("active");
+        mealsBtn.classList.remove("active");
+        drinksBtn.classList.add("active");
+      });
     </script>
   </body>
 </html>
