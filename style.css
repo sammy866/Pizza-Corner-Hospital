@@ -172,8 +172,23 @@ th {
 */
 
 .table-slider {
-    width: 100%;
-    overflow-x: scroll;
+    max-width: fit-content;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: rgba(221, 218, 218, 0.5);
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .table-slider h1 {
+    font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid black;
+    width: fit-content;
   }
   
   .table-buttons {
@@ -187,9 +202,8 @@ th {
     border: none;
     color: #333;
     cursor: pointer;
-    font-size: 16px;
     padding: 10px 20px;
-    transition: all 0.3s ease;
+    transition: all 0.8s ease;
   }
   
   .table-buttons button.active {
@@ -199,7 +213,7 @@ th {
   
   table {
     border-collapse: collapse;
-    margin: 0 auto;
+    margin: auto;
     width: 100%;
   }
   
@@ -214,5 +228,7 @@ th {
   
   td, th {
     padding: 10px;
-    text-align: left;
+    text-align: center;
+    border-bottom: 2px solid black;
   }
+
